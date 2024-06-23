@@ -1,0 +1,16 @@
+.items-container{
+  text-align: left;
+}
+
+.custom-row
+{
+  margin: 10px 5px; 
+}
+
+.custom-button{
+  min-width: 80px;
+}
+
+.custom-col-2{
+  text-align: center;
+}
