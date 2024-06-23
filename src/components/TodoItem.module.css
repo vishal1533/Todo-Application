@@ -1,0 +1,7 @@
+.delete_button {
+  transition: transform 1s ease-in !important; /* Add a transition for the transform property */
+}
+
+.delete_button.clicked {
+  transform: scale(0); /* Apply a scale transformation when the button is clicked */
+}

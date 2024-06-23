@@ -1,4 +1,11 @@
+import style from "./TodoItem.module.css";
 function TodoItem({ todoDate, todoName, handleDelete }) {
+  const onClickedDelete = (todoName) => {
+    setTimeout(() => {
+      handleDelete(todoName);
+    }, 100); // Wait for the animation to finish before deleting the item
+  };
+
   return (
     <div className="container">
       <div className={`row custom-row`}>
@@ -6,9 +13,9 @@ function TodoItem({ todoDate, todoName, handleDelete }) {
         <div className="col-4">{todoDate}</div>
         <div className="col-2 custom-col-2">
           <button
-            className="btn btn-danger custom-button"
+            className={`btn btn-danger custom-button ${style.delete_button}`}
             onClick={() => {
-              handleDelete(todoName);
+              onClickedDelete(todoName);
             }}
           >
             Delete
