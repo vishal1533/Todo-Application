@@ -1,3 +1,16 @@
 .custom_input{
   width: 100%;
 }
+@media screen and (max-width: 600px) {
+  .inputContainer {
+    display: flex;
+    flex-direction: column;  
+  }
+  .custom_input{
+    width: 100%;
+  }
+  .input_button{
+    margin-bottom:10px;
+    width: 100% !important;
+  }
+}

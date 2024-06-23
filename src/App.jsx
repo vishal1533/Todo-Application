@@ -1,6 +1,7 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
 import TodoItems from "./components/TodoItems";
+import WelcomeMessage from "./components/WelcomeMessage";
 import "./App.css";
 import { useState } from "react";
 
@@ -38,6 +39,7 @@ function App() {
     <center className="todo-container">
       <AppName></AppName>
       <AddTodo handleAddition={handleAddition}></AddTodo>
+      {todoItems.length === 0 && <WelcomeMessage></WelcomeMessage>}
       <div className="items-container">
         <TodoItems Items={todoItems} handleDelete={handleDelete}></TodoItems>
       </div>

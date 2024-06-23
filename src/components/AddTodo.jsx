@@ -4,9 +4,9 @@ function AddTodo({ handleAddition }) {
   let [eventName, setEventName] = useState("");
   let [eventDate, setEventDate] = useState("");
   return (
-    <div className="container text-center">
-      <div className="row custom-row">
-        <div className="col-4">
+    <div className={`container text-center `}>
+      <div className={`${style.inputContainer}  row custom-row`}>
+        <div className={`${style.input_button} col-4`}>
           <input
             className={style.custom_input}
             type="text"
@@ -16,7 +16,7 @@ function AddTodo({ handleAddition }) {
             }}
           />
         </div>
-        <div className="col-4">
+        <div className={`${style.input_button} col-4`}>
           <input
             className={style.custom_input}
             type="date"
@@ -25,9 +25,9 @@ function AddTodo({ handleAddition }) {
             }}
           />
         </div>
-        <div className="col-2 custom-col-2">
+        <div className={`col-2 custom-col-2 ${style.input_button} `}>
           <button
-            className="btn btn-success custom-button"
+            className={`btn btn-success custom-button ${style.custom_input}`}
             onClick={() => {
               handleAddition(eventName, eventDate);
             }}
