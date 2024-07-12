@@ -1,5 +1,11 @@
+import { useContext } from "react";
 import style from "./TodoItem.module.css";
-function TodoItem({ todoDate, todoName, handleDelete }) {
+import { MdDelete } from "react-icons/md";
+import { TodoItemContext } from "../store/todo-items-store";
+function TodoItem({ todoDate, todoName }) {
+  const contextObj = useContext(TodoItemContext);
+  const handleDelete = contextObj.handleDelete;
+
   const onClickedDelete = (todoName) => {
     setTimeout(() => {
       handleDelete(todoName);
@@ -18,7 +24,7 @@ function TodoItem({ todoDate, todoName, handleDelete }) {
               onClickedDelete(todoName);
             }}
           >
-            Delete
+            <MdDelete />
           </button>
         </div>
       </div>

@@ -1,5 +1,9 @@
+import { useContext } from "react";
 import TodoItem from "./TodoItem";
-const TodoItems = ({ Items, handleDelete }) => {
+import { TodoItemContext } from "../store/todo-items-store";
+const TodoItems = () => {
+  const contextObj = useContext(TodoItemContext);
+  const Items = contextObj.todoItems;
   return (
     <>
       {Items.map((Item) => (
@@ -7,7 +11,7 @@ const TodoItems = ({ Items, handleDelete }) => {
           key={Item.todoName}
           todoDate={Item.todoDate}
           todoName={Item.todoName}
-          handleDelete={handleDelete}
+          // handleDelete={handleDelete}
         ></TodoItem>
       ))}
     </>
