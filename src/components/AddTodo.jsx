@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from "react";
+import { useRef, useContext } from "react";
 import style from "./AddTodo.module.css";
 import { MdAddAlert } from "react-icons/md";
 import { TodoItemContext } from "../store/todo-items-store";
